@@ -1,0 +1,158 @@
+body
+{
+    background-image: url('aquarium/background.jpg');
+    background-size: cover; 
+    background-position: center 0.01px; 
+    background-repeat: no-repeat; 
+    height: 100%; 
+    margin: 0;
+}
+#goldfish
+{ 
+    animation-name: shark;
+    animation: goldfish 20s linear infinite;
+    position: absolute;
+}
+#beta
+{
+    position: absolute;
+    right: 5%; top: 5%;
+    animation: beta 30s ease-in-out infinite;
+}
+
+#jellyfish
+{
+    position: absolute;
+    right: 5%; top: 60%;
+    animation: jellyfish 25s ease-in-out infinite;
+}
+
+@keyframes goldfish 
+{
+    0%
+    {
+        left: 0; 
+        top: 40%;              
+        transform: rotateY(180deg); 
+    }
+
+    50% 
+    {
+        left: 70%; 
+        top: 40%;
+        transform: rotateY(180deg)
+
+    }
+
+    50.01%
+    {
+        transform:rotateY(0deg);
+        top: 40%;
+    }
+
+    100%
+    {
+        left: 0;
+        top: 40%;              
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes beta 
+{
+    0% 
+    {
+        top: 5%;
+        right: 5%;
+        transform: translateX(-50%) rotate(-20deg);
+    }
+    50% 
+    {
+        top: 30%;  
+        right: 75%;  
+        transform: translateX(-50%) rotate(-10deg) rotateY(0deg);  
+    }
+    50.01%
+    {
+        translate: translateX(-50%) rotateY(180deg);
+    }
+    75%
+    {
+        top: 30%;  
+        right: 75%;
+        transform: translateX(-50%) rotateY(180deg) rotate(30deg);
+    }
+    100% 
+    {
+        top: 5%;  
+        right: 5%;
+        transform: translateX(-50%) rotateY(180deg) rotate(30deg);
+    }
+}
+
+@keyframes jellyfish 
+{
+    0% /* vị trí ban đầu*/
+    {
+        right: 5%;
+        top: 60%;
+        transform: rotateY(0deg);
+    }
+    
+    20% /* bơi lên */
+    {
+	    right: 25%; 
+	    top: 30%;
+	    transform: rotateY(0deg);
+    }
+
+    30% /* bơi xuống */
+    {
+	    right: 50%; 
+	    top: 60%;
+	    transform: rotateY(0deg);
+    }
+
+    40%  /* bơi lên */
+    {
+        right: 80%;   
+        top: 40%; 
+        transform: rotateY(0deg);
+    }
+    50%  /* quay đầu */
+    {
+        right: 80%;   
+        top: 40%; 
+        transform: rotateY(180deg);
+    }
+    
+    50.01%  /* bơi lên */
+    {
+        right: 80%;   
+        top: 40%; 
+        transform: rotateY(180deg);
+    }
+
+    70% /* bơi xuống */
+    {
+        right: 50%; 
+	    top: 60%;
+	    transform: rotateY(180deg);
+    }
+   
+    80% /* bơi lên */
+    {
+	    right: 25%; 
+	    top: 30%;
+	    transform: rotateY(180deg);
+    }
+
+
+    100% /* Quay về vị trí ban đầu */
+    {
+        right: 5%;   
+        top: 60%;   
+        transform: rotateY(180deg);
+
+    }
+}
